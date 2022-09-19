@@ -1,0 +1,10 @@
+package DiaryContact;
+import java.util.ArrayList;
+import java.util.HashMap;
+public class ContactManager {
+	private HashMap<String, Contact> contacts;
+	public ContactManager() {
+		this.contacts = new HashMap();
+	}
+	
+}

@@ -1,0 +1,34 @@
+package example6;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer[] data = {1,2,1,3,4,5,4};
+		ArrayList<Integer> result = repeatNumbers(data);
+		for (Integer item : result) {
+			System.out.println(item + ",");
+		}
+	}
+	public static ArrayList<Integer> repeatNumbers(Integer[] list) {
+		HashMap<Integer, Integer> hashMap = new HashMap();
+		for (Integer number: list) {
+			if (hashMap.get(number) == null) {
+				hashMap.put(number, 1);
+			} else {
+				
+				Integer value = hashMap.get(number);
+				value++;
+				hashMap.put(number, value);
+			}
+		}
+		ArrayList<Integer> result = new ArrayList();
+		for (Integer item : hashMap.values()) {
+			result.add(item);
+		}
+		return result;
+	}
+}
